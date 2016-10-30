@@ -1,0 +1,6 @@
+Test case E:
+For test case E we malloc 1 byte 1000 times then free every other pointer. Then we free the rest of the pointers. Now all the blocks will merge to one giant block.
+This test checks how effective our merge works and see if our functions reduce fragmentation and increase maximum amount of dynamic memory avaliable.
+
+Test case F:
+For test case F we malloc 1 byte 1000 time then free every 10th pointer then free every 9th pointer ... 2nd ptr then free the 1st and 0th pointer. This test tests wheather the pointers are not shifted when intermediate blocks are freed and merged. This test also tests how the program handles redundant free() calls.
